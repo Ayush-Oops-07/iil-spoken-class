@@ -149,23 +149,36 @@ export default function Footer() {
         </div>
 
         {/* Bottom Credits & Back-to-top */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#667085]">
-          <p>
-            © {new Date().getFullYear()} {site.name} (IIL). All rights reserved. Founded & mentored by Aftab Alam.
-          </p>
+<div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#667085]">
+  <p className="text-center sm:text-left">
+    © {new Date().getFullYear()} {site.name} (IIL). All rights reserved.
+    Founded & mentored by Aftab Alam.
+  </p>
 
-          <div className="flex items-center gap-4">
-            <button
-              onClick={scrollToTop}
-              className="inline-flex items-center gap-1 text-gray-500 hover:text-[#315CF5] transition-colors"
-              title="Back to top"
-            >
-              <span>Back to top</span>
-              <ArrowUp className="w-3.5 h-3.5" />
-            </button>
-          </div>
-        </div>
-      </div>
-    </footer>
-  );
-}
+  <div className="flex flex-col sm:flex-row items-center gap-4">
+    <a
+      href="https://akaaistudio.in"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Designed and developed by AKA AI Studio"
+      className="group transition-colors duration-300"
+    >
+      Designed & Developed by{" "}
+      <span className="font-bold text-[#315CF5] group-hover:text-[#7C3AED] transition-colors duration-300">
+        AKA AI Studio
+      </span>
+      <span className="ml-1 inline-block transition-transform duration-300 group-hover:translate-x-1">
+        ↗
+      </span>
+    </a>
+
+    <button
+      onClick={scrollToTop}
+      className="inline-flex items-center gap-1 text-gray-500 hover:text-[#315CF5] transition-colors"
+      title="Back to top"
+    >
+      <span>Back to top</span>
+      <ArrowUp className="w-3.5 h-3.5" />
+    </button>
+  </div>
+</div>
